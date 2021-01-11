@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'theme/color.dart';
 import 'pages/home.dart';
 
-const app_title = "Flutterer";
+const app_title = "Flutterer X";
 
 void main() {
   runApp(Flutterer());

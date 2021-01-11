@@ -12,21 +12,37 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title: Text(widget.title, style: TextStyle(
-            color: Theme.of(context).primaryColor,
-          ),),
+          title: Text(
+            widget.title,
+            style: TextStyle(
+              fontSize: 18.0,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
           bottom: TabBar(
+            labelColor: Theme.of(context).primaryColor,
             tabs: [
-              Tab(text: 'Test1',),
-              Tab(text: 'Test2',),
-              Tab(text: 'Test3',),
+              Tab(
+                text: 'Test1',
+              ),
+              Tab(
+                text: 'Test2',
+              ),
+              Tab(
+                child: Text('ok'),
+              ),
+                        Tab(icon: Icon(Icons.directions_car)),
+          Tab(icon: Icon(Icons.directions_transit)),
+          Tab(icon: Icon(Icons.directions_bike)),
             ],
-
+            onTap: (idx) {
+              print('tap $idx');
+            },
           ),
         ),
         body: Center(
@@ -47,4 +63,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
