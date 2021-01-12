@@ -36,9 +36,9 @@ class _HomeState extends State<Home> {
               Tab(
                 child: Text('ok'),
               ),
-                        Tab(icon: Icon(Icons.directions_car)),
-          Tab(icon: Icon(Icons.directions_transit)),
-          Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.directions_car)),
+              Tab(icon: Icon(Icons.directions_transit)),
+              Tab(icon: Icon(Icons.directions_bike)),
             ],
             onTap: (idx) {
               print('tap $idx');
