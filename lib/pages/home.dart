@@ -16,7 +16,17 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: CardFood(),
+      body: _buildFoodList(),
     );
   }
+}
+
+Widget _buildFoodList() {
+  return ListView(
+    children: [
+      CardFood(),
+      CardFood(),
+      CardFood(),
+    ],
+  );
 }

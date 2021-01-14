@@ -18,7 +18,8 @@ class _CardFoodState extends State<CardFood> {
           height: 250.0,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage('https://storage.googleapis.com/firestorequickstarts.appspot.com/food_22.png'),
+              image: NetworkImage(
+                'https://res.cloudinary.com/notepraiya/image/upload/v1610611139/foods/brooke-lark-1Rm9GLHV0UA-unsplash_fmd38n.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -28,3 +29,4 @@ class _CardFoodState extends State<CardFood> {
     );
   }
 }
+
