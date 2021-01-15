@@ -18,7 +18,17 @@ class Flutterer extends StatelessWidget {
         primarySwatch: colorFlutterer,
         fontFamily: 'BalsamiqSans',
       ),
-      home: Home(title: app_title),
+      // home: Home(title: app_title),
+      home: Navigator(
+        pages: [
+          MaterialPage(
+            child: Home(title: app_title),
+          ),
+        ],
+        onPopPage: (route, result) {
+          return route.didPop(result);
+        },
+      ),
     );
   }
 }
