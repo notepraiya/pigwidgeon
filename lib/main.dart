@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'theme/color.dart';
 import 'pages/home.dart';
+import 'pages/food.dart';
 
 const app_title = "Flutterer";
 
@@ -24,9 +25,22 @@ class Flutterer extends StatelessWidget {
           MaterialPage(
             child: Home(title: app_title),
           ),
+          MaterialPage(
+            child: Food(),
+          ),
         ],
         onPopPage: (route, result) {
-          return route.didPop(result);
+          print('onPopPage');
+          // return route.didPop(result);
+          if (!route.didPop(result)) {
+            return false;
+          }
+
+          // setState(() {
+          //   _selectedFood = null;
+          // });
+
+          return true;
         },
       ),
     );

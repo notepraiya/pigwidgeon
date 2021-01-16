@@ -15,7 +15,7 @@ class _CardFoodState extends State<CardFood> {
         },
         splashColor: Theme.of(context).accentColor,
         child: Container(
-          height: 250.0,
+          height: 200.0,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(

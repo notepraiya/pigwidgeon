@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterer/widgets/card_food.dart';
+
+import 'package:flutterer/widgets/food_list.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -16,17 +17,8 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: _buildFoodList(),
+      body: FoodList(),
     );
   }
 }
 
-Widget _buildFoodList() {
-  return ListView(
-    children: [
-      CardFood(),
-      CardFood(),
-      CardFood(),
-    ],
-  );
-}
