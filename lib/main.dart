@@ -20,28 +20,8 @@ class Flutterer extends StatelessWidget {
         fontFamily: 'BalsamiqSans',
       ),
       // home: Home(title: app_title),
-      home: Navigator(
-        pages: [
-          MaterialPage(
-            child: Home(title: app_title),
-          ),
-          MaterialPage(
-            child: Food(),
-          ),
-        ],
-        onPopPage: (route, result) {
-          print('onPopPage');
-          // return route.didPop(result);
-          if (!route.didPop(result)) {
-            return false;
-          }
-
-          // setState(() {
-          //   _selectedFood = null;
-          // });
-
-          return true;
-        },
+      home: Scaffold(
+        body: Container(),
       ),
     );
   }
