@@ -1,4 +1,4 @@
-package com.flutterer.flutterer;
+package com.pigwidgeon.app;
 
 import io.flutter.embedding.android.FlutterActivity;
 

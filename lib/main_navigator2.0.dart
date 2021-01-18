@@ -18,7 +18,7 @@ class Flutterer extends StatelessWidget {
     return MaterialApp(
       title: app_title,
       theme: ThemeData(
-        primarySwatch: colorFlutterer,
+        primarySwatch: colorPigwidgeon,
         fontFamily: 'BalsamiqSans',
       ),
       // home: Home(title: app_title),
