@@ -15,8 +15,10 @@ dependencies:
   cupertino_icons: ^1.0.1
   shared_preferences: ">=0.5.12+4 <2.0.0"
 
+  introduction_screen: ^1.0.9
   google_nav_bar: ^3.2.0
   line_icons: ^0.2.0
+  device_info: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -27,12 +29,19 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/welcome1.png
+    - assets/images/welcome2.png
+    - assets/images/welcome3.png
 
   fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik/Rubik-Regular.ttf
+        - asset: assets/fonts/Rubik/Rubik-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Rubik/Rubik-SemiBold.ttf
+          weight: 600
     - family: BalsamiqSans
       fonts:
         - asset: assets/fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf

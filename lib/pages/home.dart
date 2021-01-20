@@ -4,18 +4,20 @@ import 'package:line_icons/line_icons.dart';
 
 // import 'package:pigwidgeon/widgets/food_list.dart';
 
-import 'package:pigwidgeon/my.dart';
+import 'dart:developer';
 
 class Home extends StatefulWidget {
-  Home({Key key, this.title}) : super(key: key);
+  Home({Key key, @required this.title}) : super(key: key);
   final String title;
 
   @override
-  _HomeState createState() => _HomeState();
+  _HomeState createState() {
+    log('Home => createState()', name: 'home.dart');
+    return _HomeState();
+  }
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -37,9 +39,18 @@ class _HomeState extends State<Home> {
     ),
   ];
 
+  int _selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = 0;
+  }
+
   @override
   Widget build(BuildContext context) {
-    My.print('Home');
+    log('build', name: 'home.dart', time: DateTime.now());
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -48,6 +59,7 @@ class _HomeState extends State<Home> {
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
+        // child: _widgetOptions.elementAt(0),
       ),
       bottomNavigationBar: Container(
         child: SafeArea(
