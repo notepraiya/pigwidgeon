@@ -1,151 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:introduction_screen/introduction_screen.dart';
-
 import 'dart:developer';
 
-import 'package:shared_preferences/shared_preferences.dart';
-
 class Welcome extends StatelessWidget {
-  void _endWelcome() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('firstRun', false);
-  }
-
   @override
   Widget build(BuildContext context) {
     log('build', name: 'welcome.dart');
-
-    List<PageViewModel> getPages() {
-      return [
-        PageViewModel(
-          titleWidget: Padding(
-            padding: EdgeInsets.fromLTRB(0, 40.0, 0, 0),
-            child: Text(
-              'Step 1',
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
-          bodyWidget: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/welcome1.png'),
-              Text(
-                'Find your favorite',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              Text(
-                'food',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              const SizedBox(
-                height: 16.0,
-              ),
-              Text(
-                'Find food from any cafe or',
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-              Text(
-                'restaurant in your city',
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-            ],
-          ),
-          decoration: const PageDecoration(
-            pageColor: Color.fromRGBO(255, 229, 142, 1),
-          ),
-        ),
-        PageViewModel(
-          titleWidget: Padding(
-            padding: EdgeInsets.fromLTRB(0, 40.0, 0, 0),
-            child: Text(
-              'Step 2',
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
-          bodyWidget: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/welcome2.png'),
-              Text(
-                'Make your choice',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              Text(
-                'and order',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Text(
-                'Order your favorite food',
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-            ],
-          ),
-          decoration: const PageDecoration(
-            pageColor: Color.fromRGBO(194, 191, 244, 1),
-          ),
-        ),
-        PageViewModel(
-          titleWidget: Padding(
-            padding: EdgeInsets.fromLTRB(0, 40.0, 0, 0),
-            child: Text(
-              'Step 3',
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
-          bodyWidget: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/welcome3.png'),
-              Text(
-                'Receive your food',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              const SizedBox(
-                height: 28.0,
-              ),
-              Text(
-                'Enjoy your favorite dishes without',
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-              Text(
-                'leaving your home',
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-            ],
-          ),
-          decoration: const PageDecoration(
-            pageColor: Color.fromRGBO(183, 215, 202, 1),
-          ),
-        ),
-      ];
-    }
-
     return Scaffold(
-      body: IntroductionScreen(
-        globalBackgroundColor: Color.fromRGBO(211, 228, 215, 1),
-        pages: getPages(),
-        // showNextButton: true,
-        // showSkipButton: true,
-        // skip: Text("Skip"),
-        // next: Text('Next'),
-        done: Text('Start!'),
-        onDone: () {
-          log('onDone/endWelcome()', name: 'welcome.dart');
-          _endWelcome();
-        },
-        dotsDecorator: DotsDecorator(
-          size: Size(8.0, 8.0),
-          color: Colors.grey,
-          spacing: const EdgeInsets.symmetric(horizontal: 5.0),
-          activeSize: Size(22.0, 8.0),
-          activeColor: Colors.black87,
-          activeShape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(25.0)),
+      backgroundColor: Color.fromRGBO(74, 71, 186, 1), //#4A47BA
+      body: Column(
+        children: [
+          Container(
+            child: Center(
+              child: Image.asset('assets/images/welcome.jpg'),
+            ),
           ),
-        ),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(54.0),
+                  topRight: Radius.circular(54.0),
+                ),
+              ),
+              child: Center(
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 16.0,
+                    ),
+                    Text(
+                      'Welcome',
+                      style: Theme.of(context).textTheme.headline3,
+                    ),
+                    const SizedBox(
+                      height: 16.0,
+                    ),
+                    Text(
+                      'to food delivery app',
+                      style: Theme.of(context).textTheme.bodyText2,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

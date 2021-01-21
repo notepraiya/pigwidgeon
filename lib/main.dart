@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart'; // for SystemChrome
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'theme/color.dart';
-import 'pages/welcome.dart';
+import 'pages/onboarding.dart';
 import 'pages/home.dart';
 
 import 'dart:developer';
@@ -23,15 +24,16 @@ class Pigwidgeon extends StatefulWidget {
 }
 
 class _PigwidgeonState extends State<Pigwidgeon> {
-  bool _firstRun = true;
+  bool _isFirstRun = true;
 
   void _getFirstRun() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    _firstRun = prefs.getBool('firstRun') ?? true;
+    _isFirstRun = prefs.getBool('isFirstRun') ?? true;
 
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-    log('androidInfo.model => ${androidInfo.model}', name: 'main.dart');
+    log('_getFirstRun() / androidInfo.model => ${androidInfo.model}',
+        name: 'main.dart');
 
     // IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
     // log('iosInfo.utsname.machine => ${iosInfo.utsname.machine}',
@@ -40,10 +42,14 @@ class _PigwidgeonState extends State<Pigwidgeon> {
 
   @override
   Widget build(BuildContext context) {
+    // This would set android status bar's app to be transparent and small bar icon to dark color
+    // SystemChrome.setSystemUIOverlayStyle(
+    //   SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.transparent),
+    // );
+
     _getFirstRun();
 
-    log('build', name: 'main.dart');
-    log('_firstRun => $_firstRun', name: 'main.dart');
+    log('build / _isFirstRun => $_isFirstRun', name: 'main.dart');
 
     return MaterialApp(
       // showPerformanceOverlay: true,
@@ -54,6 +60,11 @@ class _PigwidgeonState extends State<Pigwidgeon> {
         fontFamily: 'Rubik',
         // https://api.flutter.dev/flutter/material/TextTheme-class.html
         textTheme: TextTheme(
+          headline3: TextStyle(
+            fontSize: 42.0,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
           headline4: TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.w600,
@@ -69,9 +80,9 @@ class _PigwidgeonState extends State<Pigwidgeon> {
               color: Colors.black87),
         ),
       ),
-      home: Welcome(),
+      home: OnBoarding(),
       // home: Home(title: app_title),
-      // home: _firstRun ? Welcome() : Home(title: app_title),
+      // home: _isFirstRun ? OnBoarding() : Home(title: app_title),
     );
   }
 }
