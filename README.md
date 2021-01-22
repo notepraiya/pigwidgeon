@@ -2,7 +2,7 @@
 
 a Food delivery app with the name that inspired by Ron Weasley's owl, he was responsible for the handling of Ron's mail
 
-This app follows a design of the 'Food Delivery Mobile App' by Kateryna Moroz (https://www.behance.net/morozkateryna). Check her lovely works on Behance (https://www.behance.net/gallery/97667891/Food-Delivery-Mobile-App). She is so nice and friendly, Ping her if you are finding a good designer for your app!
+This app follows a design of 'Food Delivery Mobile App' by Kateryna Moroz (https://www.behance.net/morozkateryna). Check her lovely works on Behance (https://www.behance.net/gallery/97667891/Food-Delivery-Mobile-App). She is so nice and friendly, Ping her if you are finding a good designer for your app!
 
 ## Description
 
