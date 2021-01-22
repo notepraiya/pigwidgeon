@@ -75,9 +75,36 @@ class _PigwidgeonState extends State<Pigwidgeon> {
               fontWeight: FontWeight.w600,
               color: Colors.black87),
           bodyText2: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.w500,
-              color: Colors.black87),
+            fontSize: 18.0,
+            fontWeight: FontWeight.w500,
+            color: Colors.black87,
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            // backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+              ),
+            ),
+            textStyle: MaterialStateProperty.all<TextStyle>(
+              TextStyle(
+                fontFamily: 'Rubik',
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            minimumSize: MaterialStateProperty.all<Size>(
+              // Size(MediaQuery.of(context).size.width * 0.8, 58.0),
+              Size(284, 58.0),
+            ),
+          ),
+        ),
+        buttonTheme: ButtonThemeData(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
         ),
       ),
       home: OnBoarding(),

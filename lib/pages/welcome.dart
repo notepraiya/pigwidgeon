@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
+import 'package:pigwidgeon/theme/button.dart';
+
 class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class Welcome extends StatelessWidget {
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 16.0,
+                      height: 48.0,
                     ),
                     Text(
                       'Welcome',
@@ -39,6 +41,49 @@ class Welcome extends StatelessWidget {
                     Text(
                       'to food delivery app',
                       style: Theme.of(context).textTheme.bodyText2,
+                    ),
+                    const SizedBox(
+                      height: 36.0,
+                    ),
+                    ElevatedButton(
+                      // child: Padding(
+                      //   padding: const EdgeInsets.symmetric(
+                      //     vertical: 16.0,
+                      //     horizontal: 86.0,
+                      //   ),
+                      //   child: Text(
+                      //     'Sign Up',
+                      //     style: Theme.of(context).textTheme.bodyText2,
+                      //   ),
+                      // ),
+                      child: Text('Sign Up'),
+                      onPressed: () {
+                        print('pressed');
+                      },
+                      // style: ElevatedButton.styleFrom(
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(18.0),
+                      //   ),
+                      // ),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text('Already registered?'),
+                        FlatButton(
+                          onPressed: () {
+                            print('press');
+                          },
+                          child: Text(
+                            'Sign in',
+                            // style: Theme.of(context).textTheme.bodyText2,
+                            style: myFlatButtonTextStyle(),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

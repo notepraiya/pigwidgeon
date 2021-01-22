@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+const myPrimaryColor = Color.fromRGBO(74, 71, 186, 1); //#4A47BA;
+
 MaterialColor colorPigwidgeon = MaterialColor(Color.fromRGBO(246, 26, 104, 1).value, PinkColors);
 
 const Map<int, Color> TealColors = {
