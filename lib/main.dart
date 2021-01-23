@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'theme/color.dart';
-import 'pages/onboarding.dart';
-import 'pages/home.dart';
+
+import 'pages/splash.dart';
 
 import 'dart:developer';
 import 'package:device_info/device_info.dart';
@@ -107,7 +107,8 @@ class _PigwidgeonState extends State<Pigwidgeon> {
           ),
         ),
       ),
-      home: OnBoarding(),
+      home: Splash(),
+      // home: OnBoarding(),
       // home: Home(title: app_title),
       // home: _isFirstRun ? OnBoarding() : Home(title: app_title),
     );

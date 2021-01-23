@@ -30,9 +30,17 @@ class OnBoarding extends StatelessWidget {
           ),
         ),
         bodyWidget: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset('assets/images/onboarding1.png'),
+            Container(
+              height: 286.0,
+              child: Center(
+                child: Image.asset(
+                  'assets/images/onboarding1.png',
+                  height: 210.0,
+                ),
+              ),
+            ),
             Text(
               'Find your favorite',
               style: Theme.of(context).textTheme.headline4,
@@ -67,9 +75,17 @@ class OnBoarding extends StatelessWidget {
           ),
         ),
         bodyWidget: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset('assets/images/onboarding2.png'),
+            Container(
+              height: 286.0,
+              child: Center(
+                child: Image.asset(
+                  'assets/images/onboarding2.png',
+                  height: 210.0,
+                ),
+              ),
+            ),
             Text(
               'Make your choice',
               style: Theme.of(context).textTheme.headline4,
@@ -100,9 +116,17 @@ class OnBoarding extends StatelessWidget {
           ),
         ),
         bodyWidget: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset('assets/images/onboarding3.png'),
+            Container(
+              height: 286.0,
+              child: Center(
+                child: Image.asset(
+                  'assets/images/onboarding3.png',
+                  height: 210.0,
+                ),
+              ),
+            ),
             Text(
               'Receive your food',
               style: Theme.of(context).textTheme.headline4,
