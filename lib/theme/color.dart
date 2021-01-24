@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 const myPrimaryColor = Color.fromRGBO(75, 74, 191, 1); //#4b4abf;
 
 MaterialColor colorPigwidgeon =
-    MaterialColor(myPrimaryColor.value, LightEyptianBlueColors);
+    MaterialColor(myPrimaryColor.value, LightEgyptianBlueColors);
 
-const Map<int, Color> LightEyptianBlueColors = {
+const Map<int, Color> LightEgyptianBlueColors = {
   50: Color.fromRGBO(183, 181, 227, 1), //b7b5e3
   100: Color.fromRGBO(146, 145, 214, 1), //9291d6
   200: Color.fromRGBO(128, 126, 207, 1), //807ecf

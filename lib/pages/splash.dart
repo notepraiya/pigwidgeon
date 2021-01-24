@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:developer';
 
 const myTextStyle = TextStyle(
   fontSize: 58.0,
@@ -8,6 +9,7 @@ const myTextStyle = TextStyle(
 class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    log('build', name: 'splash.dart');
     return Scaffold(
       body: Stack(
         children: [
