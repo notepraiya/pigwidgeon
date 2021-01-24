@@ -5,6 +5,14 @@ import 'package:pigwidgeon/theme/button.dart';
 import 'package:pigwidgeon/theme/color.dart';
 
 class Welcome extends StatelessWidget {
+  void _signUp() {
+    print('sign up');
+  }
+
+  void _signIn() {
+    print('sign in');
+  }
+
   @override
   Widget build(BuildContext context) {
     log('build', name: 'welcome.dart');
@@ -62,7 +70,7 @@ class Welcome extends StatelessWidget {
                     // ),
                     child: Text('Sign Up'),
                     onPressed: () {
-                      print('pressed');
+                      _signUp();
                     },
                     // style: ElevatedButton.styleFrom(
                     //   shape: RoundedRectangleBorder(
@@ -82,7 +90,7 @@ class Welcome extends StatelessWidget {
                           Text('Already registered?'),
                           FlatButton(
                             onPressed: () {
-                              print('press');
+                              _signIn();
                             },
                             child: Text(
                               'Sign in',
