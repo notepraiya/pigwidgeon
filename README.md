@@ -7,12 +7,12 @@
 This is a **Food delivery app** with the name that inspired by Ron Weasley's owl, he was responsible for the handling of Ron's mail
 
 
-This app follows the design of 'Food Delivery Mobile App' by **Kateryna Moroz** 💋 (https://www.behance.net/morozkateryna). Check her lovely works on Behance 😍 (https://www.behance.net/gallery/97667891/Food-Delivery-Mobile-App). She is so nice and friendly, ping her if you are looking for a good designer for your app! 💯👍🏻
+This app also follows the design of 'Food Delivery Mobile App' by **Kateryna Moroz** 💋 (https://www.behance.net/morozkateryna). Check her lovely works on Behance 😍 (https://www.behance.net/gallery/97667891/Food-Delivery-Mobile-App). She is so nice and friendly, ping her if you are looking for a good designer for your app! 💯👍🏻
 
 
 ## Purpose
 
-This app has a clear purpose from the beginning; **To use Flutter (https://flutter.dev/) for creating a mobile app.** The software architecture and Business logic are designed with that aim in mind, not for real-world business. There might be crazy-but-awesome architecture/features inside this app, Don't be too surprised at that.
+This app has a clear purpose from the beginning; **To use Flutter (https://flutter.dev/) for creating a mobile app.** The software architecture and business logic are designed with that aim in mind, not for real-world business. There might be crazy-but-awesome architecture/features inside this app, Don't be too surprised at that.
 
 
 
