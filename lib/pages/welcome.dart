@@ -3,14 +3,17 @@ import 'dart:developer';
 
 import 'package:pigwidgeon/theme/button.dart';
 import 'package:pigwidgeon/theme/color.dart';
+import 'package:pigwidgeon/pages/signin.dart';
 
 class Welcome extends StatelessWidget {
-  void _signUp() {
+  void _signUp(context) {
     print('sign up');
   }
 
-  void _signIn() {
-    print('sign in');
+  void _signIn(context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => SignIn()),
+    );
   }
 
   @override
@@ -70,7 +73,7 @@ class Welcome extends StatelessWidget {
                     // ),
                     child: Text('Sign Up'),
                     onPressed: () {
-                      _signUp();
+                      _signUp(context);
                     },
                     // style: ElevatedButton.styleFrom(
                     //   shape: RoundedRectangleBorder(
@@ -90,7 +93,7 @@ class Welcome extends StatelessWidget {
                           Text('Already registered?'),
                           FlatButton(
                             onPressed: () {
-                              _signIn();
+                              _signIn(context);
                             },
                             child: Text(
                               'Sign in',
