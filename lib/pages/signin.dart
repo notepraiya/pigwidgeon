@@ -28,8 +28,9 @@ class SignIn extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
               Align(
-                alignment: Alignment.bottomCenter,
+                alignment: FractionalOffset.bottomCenter,
                 child: Container(
+                  height: 54.0,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -37,65 +38,65 @@ class SignIn extends StatelessWidget {
                       topRight: Radius.circular(54.0),
                     ),
                   ),
-                  child: Center(
-                    child: Column(
+                ),
+              ),
+            ],
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 48.0,
+                ),
+                Text(
+                  'Welcome',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+                const SizedBox(
+                  height: 16.0,
+                ),
+                Text(
+                  'to food delivery app',
+                  style: Theme.of(context).textTheme.bodyText2,
+                ),
+                const SizedBox(
+                  height: 36.0,
+                ),
+                ElevatedButton(
+                  child: Text('Sign Up'),
+                  onPressed: () {
+                    _signUp();
+                  },
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Center(
+                  child: Container(
+                    width: 268.0,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const SizedBox(
-                          height: 48.0,
-                        ),
-                        Text(
-                          'Welcome',
-                          style: Theme.of(context).textTheme.headline3,
-                        ),
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                        Text(
-                          'to food delivery app',
-                          style: Theme.of(context).textTheme.bodyText2,
-                        ),
-                        const SizedBox(
-                          height: 36.0,
-                        ),
-                        ElevatedButton(
-                          child: Text('Sign Up'),
+                        Text('Already registered?'),
+                        FlatButton(
                           onPressed: () {
-                            _signUp();
+                            _signIn();
                           },
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        Center(
-                          child: Container(
-                            width: 268.0,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text('Already registered?'),
-                                FlatButton(
-                                  onPressed: () {
-                                    _signIn();
-                                  },
-                                  child: Text(
-                                    'Sign in',
-                                    // style: Theme.of(context).textTheme.bodyText2,
-                                    style: myFlatButtonTextStyle(),
-                                  ),
-                                ),
-                              ],
-                            ),
+                          child: Text(
+                            'Sign in',
+                            // style: Theme.of(context).textTheme.bodyText2,
+                            style: myFlatButtonTextStyle(),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 24,
                         ),
                       ],
                     ),
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(
+                  height: 24,
+                ),
+              ],
+            ),
           ),
         ],
       ),
