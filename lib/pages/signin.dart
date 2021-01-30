@@ -18,86 +18,87 @@ class SignIn extends StatelessWidget {
     log('build', name: 'signin.dart');
     return Scaffold(
       backgroundColor: myPrimaryColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Stack(
         children: [
-          Stack(
-            children: [
-              FittedBox(
-                child: Image.asset('assets/images/signin.png'),
-                fit: BoxFit.fill,
+          Container(
+            height: 350.0,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/signin.png'),
+                fit: BoxFit.cover,
               ),
-              Align(
-                alignment: FractionalOffset.bottomCenter,
-                child: Container(
-                  height: 54.0,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(54.0),
-                      topRight: Radius.circular(54.0),
-                    ),
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(54.0),
+                    topRight: Radius.circular(54.0),
+                  ),
+                ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 48.0,
+                      ),
+                      Text(
+                        'Welcome',
+                        style: Theme.of(context).textTheme.headline3,
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Text(
+                        'to food delivery app',
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                      const SizedBox(
+                        height: 36.0,
+                      ),
+                      ElevatedButton(
+                        child: Text('Sign Up'),
+                        onPressed: () {
+                          _signUp();
+                        },
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Center(
+                        child: Container(
+                          width: 268.0,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text('Already registered?'),
+                              FlatButton(
+                                onPressed: () {
+                                  _signIn();
+                                },
+                                child: Text(
+                                  'Sign in',
+                                  // style: Theme.of(context).textTheme.bodyText2,
+                                  style: myFlatButtonTextStyle(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
+                    ],
                   ),
                 ),
               ),
             ],
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 48.0,
-                ),
-                Text(
-                  'Welcome',
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-                const SizedBox(
-                  height: 16.0,
-                ),
-                Text(
-                  'to food delivery app',
-                  style: Theme.of(context).textTheme.bodyText2,
-                ),
-                const SizedBox(
-                  height: 36.0,
-                ),
-                ElevatedButton(
-                  child: Text('Sign Up'),
-                  onPressed: () {
-                    _signUp();
-                  },
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                Center(
-                  child: Container(
-                    width: 268.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text('Already registered?'),
-                        FlatButton(
-                          onPressed: () {
-                            _signIn();
-                          },
-                          child: Text(
-                            'Sign in',
-                            // style: Theme.of(context).textTheme.bodyText2,
-                            style: myFlatButtonTextStyle(),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-              ],
-            ),
-          ),
+          )
         ],
       ),
     );
