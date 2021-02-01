@@ -14,10 +14,13 @@ This app also follows the design of 'Food Delivery Mobile App' by **Kateryna Mor
 
 This app has a clear purpose from the beginning; **To use Flutter (https://flutter.dev/) for creating a mobile app.** The software architecture and business logic are designed with that aim in mind, not for real-world business. There might be crazy-but-awesome architecture/features inside this app, Don't be too surprised at that.
 
+## Sample Screens
+
+
 
 ## Architecture
 
-## Sample Screens
+
 
 ## Backend repo
 
