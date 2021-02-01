@@ -61,9 +61,9 @@ class SignIn extends StatelessWidget {
                         height: 36.0,
                       ),
                       ElevatedButton(
-                        child: Text('Sign Up'),
+                        child: Text('Sign In'),
                         onPressed: () {
-                          _signUp();
+                          _signIn();
                         },
                       ),
                       const SizedBox(
@@ -71,17 +71,17 @@ class SignIn extends StatelessWidget {
                       ),
                       Center(
                         child: Container(
-                          width: 268.0,
+                          width: 302.0,
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Text('Already registered?'),
+                              Text("Don't have an account?"),
                               FlatButton(
                                 onPressed: () {
-                                  _signIn();
+                                  _signUp();
                                 },
                                 child: Text(
-                                  'Sign in',
+                                  'Sign up',
                                   // style: Theme.of(context).textTheme.bodyText2,
                                   style: myFlatButtonTextStyle(),
                                 ),
