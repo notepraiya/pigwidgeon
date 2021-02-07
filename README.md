@@ -22,7 +22,7 @@ This app has a clear purpose from the beginning; **To use Flutter (https://flutt
 
 <!-- <div style="text-align:center"><img src="https://raw.githubusercontent.com/notepraiya/pigwidgeon/master/docs/pigwidgeon.png" width="80%" /></div>-->
 
-![software architecture](https://raw.githubusercontent.com/notepraiya/pigwidgeon/master/docs/pigwidgeon.png) <!-- .element height="50%" width="50%" -->
+![software architecture](https://raw.githubusercontent.com/notepraiya/pigwidgeon/master/docs/pigwidgeon.png){:height="80%" width="80%"}
 
 ## Backend repo
 
