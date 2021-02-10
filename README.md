@@ -24,6 +24,11 @@ This app has a clear purpose from the beginning; **To use Flutter (https://flutt
 
 ![software architecture](https://raw.githubusercontent.com/notepraiya/pigwidgeon/master/docs/pigwidgeon.png)
 
+User can access application from their mobile which need authentication through Firebase Authentication service
+
+1. Firebase Auth and Firestore
+2. Heroku Dyno
+
 ## Backend repo
 
 
