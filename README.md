@@ -31,6 +31,6 @@ User can access application from their mobile which need authentication through 
 
 ## Backend repo
 
-pigwidgeon-backend (https://github.com/notepraiya/pigwidgeon-backend.git)
+Backend source code is separated to this repository (https://github.com/notepraiya/pigwidgeon-backend.git)
 
 
