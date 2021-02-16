@@ -1,0 +1,12 @@
+
+cd <PROJECT>\android\app\keystore
+keytool -genkey -alias debug -keysize 1024 -keypass android -validity 14000 -storepass android -keystore project.keystore
+keytool -keystore project.keystore -list
+Enter keystore password: android
+
+cd <PROJECT>\android
+gradlew signingReport
+
+
+
+
