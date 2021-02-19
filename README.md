@@ -24,8 +24,6 @@ This app has a clear purpose from the beginning; **To use Flutter (https://flutt
 
 ![software architecture](https://raw.githubusercontent.com/notepraiya/pigwidgeon/master/docs/pigwidgeon.png)
 
-User can access the application from mobile device by signing up with email or google account through Firebase Authentication service. User profile will be stored on Firestore. User contents will be stored on Postgresql using REST API on Heroku service.
-
 1. Firebase Auth - User authenticate through Firebase Authentication service
 2. Firestore - User profile will be stored on Firestore
 3. Heroku Dyno - Contents will be stored on Postgresql using REST API on Heroku service
