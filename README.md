@@ -28,7 +28,7 @@ This app has a clear purpose from the beginning; **To use Flutter (https://flutt
 2. Firestore - User profile will be stored on Firestore
 3. Heroku Dyno - Contents will be stored on Postgresql using REST API on Heroku service
 
-* - all sending and recieving data are on https 
+** all sending and recieving data are on https protocol
 
 ## Backend repo
 
